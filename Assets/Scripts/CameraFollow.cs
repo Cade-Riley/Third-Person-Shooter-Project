@@ -12,9 +12,6 @@ public class CameraFollow : MonoBehaviour
     {
         transform.position = player.transform.position + (player.transform.right * offset[0]) + (player.transform.up * offset[1]) + (player.transform.forward * offset[2]);
         transform.Rotate(new Vector3(-Input.GetAxis("Mouse Y") * verticalSpeed, 0, 0));
-        //transform.rotation = Quaternion.Euler(Mathf.Clamp(transform.localEulerAngles.x, 40, 320), player.transform.localEulerAngles.y, player.transform.localEulerAngles.z);
-        
-        //Debug.Log(transform.eulerAngles.x);
 
         //Look down limit
         if(transform.localEulerAngles.x > 30 && transform.localEulerAngles.x < 200)
